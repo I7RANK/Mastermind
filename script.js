@@ -102,5 +102,10 @@ function getCurrentPieces() {
 
 function getClassColor(element) {
     let res = element.className.split(" ");
-    var valueColor = res[2];
+
+    let color = res[res.length - 1]
+
+    if (color in list_colors)
+        return color
+    return null
 }

@@ -9,18 +9,28 @@ body {
     background: #252831;
 }
 
-#div_board {
-    box-sizing: border-box;
-    height: 95%;
-    width: 600px;
+#div_content {
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_board {
+    box-sizing: border-box;
+    height: 95%;
+    width: 600px;
+    display: flex;
     flex-flow: wrap;
     border: solid 2px #909090;
     border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 #div_clues {
@@ -28,6 +38,10 @@ body {
     box-sizing: border-box;
     height: 100%;
     width: 20%;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    padding-bottom: 10px;
     border-radius: 10px 0 0 10px;
     padding-bottom: 10px;
 }
@@ -98,18 +112,28 @@ body {
 }
 
 /* ==== colors ==== */
-#div_mastermind {
+.div_mastermind {
     background: #6d6f75;
     height: 95%;
     width: auto;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(0, -50%);
     display: flex;
     flex-flow: wrap;
     justify-content: flex-end;
+}
+
+#div_master_1 {
     border-radius: 100px 0 0 100px;
+}
+
+#div_master_2 {
+    background: #394159;
+    box-sizing: border-box;
+    height: 30%;
+    width: 300px;
+    align-self: flex-end;
+    margin-bottom: 5%;
+    border: solid #6d6f75 2px;
+    border-radius: 20px;
 }
 
 #mastermind_name {

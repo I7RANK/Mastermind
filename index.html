@@ -11,26 +11,31 @@
 </head>
 
 <body>
-    <div id="div_pieces"></div>
-    <div id="div_board">
-        <div id="div_clues"></div>
-        <div id="div_content_pieces">
-            <div id="div_code"></div>
-            <div id="div_content_attempts">
+    <div id="div_content">
+        <div id="div_master_1" class="div_mastermind">
+            <div id="mastermind_name">
+                <h1 id="h1_tittle">Mastermind</h1>
+            </div>
+            <div id="div_colors">
+                <div id="btn_color0" class="btn_pieces colors red" onclick="puttingColor(this);"></div>
+                <div id="btn_color1" class="btn_pieces colors blue" onclick="puttingColor(this);"></div>
+                <div id="btn_color2" class="btn_pieces colors aqua" onclick="puttingColor(this);"></div>
+                <div id="btn_color3" class="btn_pieces colors yellow" onclick="puttingColor(this);"></div>
+                <div id="btn_color4" class="btn_pieces colors orange" onclick="puttingColor(this);"></div>
+                <div id="btn_color5" class="btn_pieces colors white" onclick="puttingColor(this);"></div>
             </div>
         </div>
-    </div>
-    <div id="div_mastermind">
-        <div id="mastermind_name">
-            <h1 id="h1_tittle">Mastermind</h1>
+
+        <div id="div_board">
+            <div id="div_clues"></div>
+            <div id="div_content_pieces">
+                <div id="div_code"></div>
+                <div id="div_content_attempts">
+                </div>
+            </div>
         </div>
-        <div id="div_colors">
-            <div id="btn_color0" class="btn_pieces colors red" onclick="puttingColor(this);"></div>
-            <div id="btn_color1" class="btn_pieces colors blue" onclick="puttingColor(this);"></div>
-            <div id="btn_color2" class="btn_pieces colors aqua" onclick="puttingColor(this);"></div>
-            <div id="btn_color3" class="btn_pieces colors yellow" onclick="puttingColor(this);"></div>
-            <div id="btn_color4" class="btn_pieces colors orange" onclick="puttingColor(this);"></div>
-            <div id="btn_color5" class="btn_pieces colors white" onclick="puttingColor(this);"></div>
+
+        <div id="div_master_2" class="div_mastermind">
         </div>
     </div>
 </body>

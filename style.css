@@ -104,11 +104,12 @@ body {
     border-radius: 10px;
 }
 
-.attemps {
-    background: red;
+.clue_attemps {
+    background: #1c202d;
     height: 30px;
     width: 30px;
     border-radius: 200px;
+    box-shadow: inset #000 -1px -1px 5px;
 }
 
 /* ==== colors ==== */
@@ -175,34 +176,55 @@ body {
 }
 
 .red {
-    background: #F21D44;
+    background: #f21d44;
 }
 .blue {
-    background: #05AFF2;
+    background: #05aff2;
 }
 .aqua {
-    background: #1BBFAF;
+    background: #1bbfaf;
 }
 .yellow {
-    background: #F2A516;
+    background: #f2a516;
 }
 .orange {
-    background: #F25D27;
+    background: #f25d27;
 }
 .white {
     background: #fff;
 }
 .clue_white {
-    background: #F21D44;
-}
-.clue_red {
     background: #fff;
 }
-
+.clue_red {
+    background: #f21d44;
+}
 
 /* ====== RESPONSIVE ======= */
 @media screen and (max-width: 650px) {
     #div_board {
         width: 95%;
     }
+}
+
+/* ==== BUTTON ==== */
+
+#btn_check {
+    width: 70%;
+    height: 25%;
+    display: inline-block;
+    border-radius: 12px;
+    background-color: #17a2b8;
+    border: none;
+    border: 2px solid #17a2b8;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    outline: none;
+    transition-duration: 0.2s;
+}
+
+#btn_check:hover {
+    background-color: #1b7c8b;
 }

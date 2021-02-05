@@ -81,6 +81,32 @@ function puttingColor (element) {
     indexM[color_index] = get_color
 }
 
+function colorCheck (listaDeNumeros) {
+    let temp = getBtnClue();
+    for (let chek = 0; chek < listaDeNumeros.length; chek++) {
+        if (listaDeNumeros[chek] == 1) {
+            temp[chek].className = 'attemps clue_white';
+
+        }
+        if (listaDeNumeros[chek] == 2) {
+            temp[chek].className = 'attemps clue_red';
+
+        }
+    }
+}
+
+function getBtnClue() {
+    var x = document.getElementById("attemp_clue" + current_attemp);
+    var subDivs = x.getElementsByClassName("attemps");
+    let color_list = [];
+
+    for (let i = 0; i < 4; i++) {
+        color_list.push(subDivs[i]);
+    }
+
+    return color_list;
+}
+
 function randomColors() {
     const arr = new Array();
 

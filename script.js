@@ -65,10 +65,24 @@ function allColors(index) {
 // SI HAY ALGO PASA A LA SIGUIENTE
 // PRIMERO RECUPERAR EL COLOR QUE SE ENCUENTRA EN LA CLASE
 function puttingColor (element) {
-    let currentPieces = getCurrentPieces()
-    for (let i in currentcurrentPieces) {
-        console.log(i)
+    let currentPieces = getCurrentPieces();
+    let get_color = getClassColor(element);
+    let indexM = mainMatrix[current_attemp];
+    let color_index = 0;
+
+    for (let i = 0; i < indexM.length; i++) {
+        if (indexM[i] == '') {
+            color_index = i;
+            break
+        }
+        if (i == indexM.length - 1) {
+            return;
+        }
     }
+
+    let piece = currentPieces[color_index];
+    piece.className = "btn_pieces " + get_color;
+    indexM[color_index] = get_color
 }
 
 
@@ -102,10 +116,10 @@ function getCurrentPieces() {
 
 function getClassColor(element) {
     let res = element.className.split(" ");
-
     let color = res[res.length - 1]
 
-    if (color in list_colors)
+    if (list_colors.includes(color)) {
         return color
+    }
     return null
 }

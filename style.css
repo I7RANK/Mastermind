@@ -134,6 +134,8 @@ body {
     margin-bottom: 5%;
     border: solid #6d6f75 2px;
     border-radius: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 #mastermind_name {
@@ -190,6 +192,13 @@ body {
 .white {
     background: #fff;
 }
+.clue_white {
+    background: #F21D44;
+}
+.clue_red {
+    background: #fff;
+}
+
 
 /* ====== RESPONSIVE ======= */
 @media screen and (max-width: 650px) {

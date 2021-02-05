@@ -60,10 +60,6 @@ function allColors(index) {
     cluesDiv.appendChild(colorsDiv);
 }
 
-// CREAR FUNCION PARA AÑADIR BOLITA AL ARRAY DE LOS QUE TOCA COLOCAR LOS COLORES
-// VERIFICAR LA MATRIZ EN CADA SUBMATRIX.... EN CURRENT ATTEMP
-// SI HAY ALGO PASA A LA SIGUIENTE
-// PRIMERO RECUPERAR EL COLOR QUE SE ENCUENTRA EN LA CLASE
 function puttingColor (element) {
     let currentPieces = getCurrentPieces();
     let get_color = getClassColor(element);
@@ -85,11 +81,6 @@ function puttingColor (element) {
     indexM[color_index] = get_color
 }
 
-
-/* ==== OSCAR ==== */
-
-
-/* OSCAR RANDOM */
 function randomColors() {
     const arr = new Array();
 
@@ -122,4 +113,14 @@ function getClassColor(element) {
         return color
     }
     return null
+}
+
+function eraseColor(element) {
+    let res = element.className.split(" ");
+    let valueColor = res[1];
+    element.classList.remove(valueColor);
+
+    let spl_child = element.id.split("_");
+    let ValueIndex = spl_child[1];
+    mainMatrix[current_attemp][ValueIndex] = "";
 }

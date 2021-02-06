@@ -3,6 +3,7 @@
     padding: 0;
     color: #fff;
     font-family: calibri;
+    user-select: none;
 }
 
 body {
@@ -239,6 +240,10 @@ body {
     background-color: #1b7c8b;
 }
 
+#btn_check:active {
+    box-shadow: inset #000 1px 1px 20px;
+}
+
 /* questions mark button */
 .btn_interrogation {
     box-sizing: border-box;
@@ -298,8 +303,32 @@ body {
     border: solid 2px;
     border-radius: 10px;
     box-shadow: #000 1px 1px 10px;
+    display: none;
 }
 
 #rules_info h2 {
     text-align: center;
+}
+
+#btn_info {
+    background: #f2a516;
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    text-shadow: #000 1px 1px 2px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 200px;
+    box-shadow: #000 1px 1px 2px;
+    z-index: 2;
+}
+
+#btn_info:hover {
+    box-shadow: #f2a516 1px 1px 2px;
+}
+
+#btn_info:active {
+    opacity: 80%;
 }

@@ -231,3 +231,17 @@ function eraseColor(element) {
     let ValueIndex = spl_child[1];
     mainMatrix[current_attemp][ValueIndex] = "";
 }
+
+let countInfo = 0;
+function showInfo() {
+    let x = document.getElementById("rules_info");
+
+    if (countInfo) {
+        x.style = "display: none;";
+        countInfo = 0;
+    }
+    else {
+        x.style = "display: block;";
+        countInfo = 1;
+    }
+}

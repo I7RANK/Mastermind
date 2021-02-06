@@ -51,11 +51,15 @@ body {
 }
 
 #div_code {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background: #252b3c;
     height: 12%;
     width: 100%;
     border-radius: 0 10px 0 0;
 }
+
 
 #div_content_attempts {
     background: #394159;
@@ -70,6 +74,7 @@ body {
 }
 
 /* ==== pieces ==== */
+
 .div_attemps {
     background: #252b3c;
     height: 80px;
@@ -232,4 +237,32 @@ body {
 
 #btn_check:hover {
     background-color: #1b7c8b;
+}
+
+/* questions mark button */
+.btn_interrogation {
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    padding-bottom: 10px;
+    background: url("img/question_mark.png");
+    background-size: cover;
+    border-radius: 200px;
+    box-shadow: inset #000 -1px -1px 20px;
+}
+
+
+/* ==== YOU WIN ==== */
+#div_end {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+.background_lose {
+    background: #f21d4442;
+}
+.background_win {
+    background: #6161619e;
 }

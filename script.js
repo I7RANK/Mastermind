@@ -1,5 +1,5 @@
 const list_colors = ['red', 'blue', 'aqua', 'yellow', 'orange', 'white'];
-let listToWin = randomColors();;
+let listToWin = randomColors();
 let current_attemp = 0;
 
 let mainMatrix = [
@@ -62,38 +62,81 @@ function addBtnClues(index) {
 function checker() {
     let pieces = getCurrentPieces();
     let pieceColors = mainMatrix[current_attemp];
-    let len = listToWin.length;
+    let copyListToWin = listToWin.slice(0);
+    let len = copyListToWin.length;
     let list_clues = [0, 0, 0, 0];
 
     if (pieceColors.includes('')){
-        alert("LLenelo")
+        alert("Row is incomplete! 🙄")
         return
     }
-    console.log(listToWin);
-    console.log(pieceColors);
 
     for (let i = 0; i < len; i++) {
-        if (pieceColors[i] == listToWin[i]) {
+        if (pieceColors[i] == copyListToWin[i]) {
             list_clues[i] = 2;
+            copyListToWin[i] = "";
         }
     }
 
     for (let i = 0; i < len; i++) {
         for (let j = 0; j < len; j++) {
-            if (pieceColors[i] == listToWin[j] && list_clues[i] == 0) {
-                if (list_clues[j] == 0)
+            if (pieceColors[i] == copyListToWin[j] && list_clues[i] == 0) {
+                if (list_clues[j] != 2)
                 {
                     list_clues[i] = 1;
+                    copyListToWin[i] = "";
                 }
             }
         }
     }
 
     colorCheck(list_clues);
-    /* block the current array */
-    /* check if win or if lose*/
+
+    dontGoBack();
     current_attemp++;
+    win_or_lose(list_clues);
 }
+
+function dontGoBack() {
+    let color_list = getCurrentPieces();
+    for(let i = 0; i < color_list.length; i++){
+        color_list[i].removeAttribute('onclick');
+    }
+}
+
+
+function win_or_lose(list_clues) {
+    let i;
+    for (i = 0; i < list_clues.length; i++) {
+        if (list_clues[i] != 2) {
+            break
+        }
+    }
+
+    if (i == 4) {
+        endMessage(1);
+        return
+    }
+
+    if (current_attemp > 6) {
+        endMessage(0);
+    }
+}
+
+function endMessage(win) {
+    let showDiv = document.getElementById('div_end');
+    let message = document.getElementById('result_message');
+
+    showDiv.style = 'display: block;'
+    if (win) {
+        showDiv.className = 'background_win'
+        message.textContent = 'You win!\nYou\'re a Mastermind';
+        return
+    }
+    showDiv.className = 'background_lose';
+    message.textContent = 'Game Over, try again!';
+}
+
 
 
 function puttingColor (element) {
@@ -117,16 +160,14 @@ function puttingColor (element) {
     indexM[color_index] = get_color
 }
 
-function colorCheck (listaDeNumeros) {
+function colorCheck (numberList) {
     let temp = getBtnClue();
-    for (let chek = 0; chek < listaDeNumeros.length; chek++) {
-        if (listaDeNumeros[chek] == 1) {
+    for (let chek = 0; chek < numberList.length; chek++) {
+        if (numberList[chek] == 1) {
             temp[chek].className = 'clue_attemps clue_white';
-
         }
-        if (listaDeNumeros[chek] == 2) {
+        if (numberList[chek] == 2) {
             temp[chek].className = 'clue_attemps clue_red';
-
         }
     }
 }

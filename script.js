@@ -98,10 +98,14 @@ function checker() {
 }
 
 function dontGoBack() {
+    var x = document.getElementById("div_attemp" + current_attemp);
     let color_list = getCurrentPieces();
+
     for(let i = 0; i < color_list.length; i++){
         color_list[i].removeAttribute('onclick');
     }
+
+    x.style = "opacity: 50%;"
 }
 
 

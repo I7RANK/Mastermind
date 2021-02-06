@@ -87,6 +87,7 @@ body {
     width: 70px;
     border-radius: 200px;
     box-shadow: inset #000 -1px -1px 20px;
+    cursor: pointer;
 }
 
 /* ==== CLUES ==== */
@@ -173,6 +174,10 @@ body {
     top: 50px;
     margin: 5px;
     box-shadow: #000 1px 1px 5px;
+}
+
+.colors:hover {
+    box-shadow: rgb(153, 152, 152) 1px 1px 8px;
 }
 
 .red {

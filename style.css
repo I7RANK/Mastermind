@@ -286,3 +286,20 @@ body {
 .background_win {
     background: #6161619e;
 }
+
+#rules_info {
+    background: #394159;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 280px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: solid 2px;
+    border-radius: 10px;
+    box-shadow: #000 1px 1px 10px;
+}
+
+#rules_info h2 {
+    text-align: center;
+}

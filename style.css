@@ -260,6 +260,26 @@ body {
     display: none;
 }
 
+#div_message_end {
+    background: #000000b3;
+    padding: 10px;
+    width: 800px;
+    font-size: 30pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+}
+
+#div_message_end a {
+    text-decoration: none;
+}
+
 .background_lose {
     background: #f21d4442;
 }

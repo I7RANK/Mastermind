@@ -332,3 +332,10 @@ body {
 #btn_info:active {
     opacity: 80%;
 }
+
+.clue_info {
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    border-radius: 200px;
+}

@@ -17,6 +17,11 @@ window.onload = function () {
         addElement(i);
         addBtnClues(i)
     }
+    let hgh = window.screen.availHeight;
+    let wth = window.screen.availWidth;
+    if (hgh < 760) {
+        alert("Please zoom out of your browser for a better experience.");
+    }
 }
 
 function addElement(index) {
@@ -84,7 +89,7 @@ function checker() {
                 if (list_clues[j] != 2)
                 {
                     list_clues[i] = 1;
-                    copyListToWin[i] = "";
+                    copyListToWin[j] = "";
                 }
             }
         }

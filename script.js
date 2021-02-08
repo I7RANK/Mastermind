@@ -19,7 +19,7 @@ window.onload = function () {
     }
     let hgh = window.screen.availHeight;
     let wth = window.screen.availWidth;
-    if (hgh < 760) {
+    if (hgh < 760 || hgh < 1260) {
         alert("Please zoom out of your browser for a better experience.");
     }
 }
@@ -137,8 +137,12 @@ function endMessage(win) {
     let message = document.getElementById('result_message');
 
     showDiv.style = 'display: block;'
+    let divCode = document.getElementById('div_code');
+    let divSon = divCode.getElementsByClassName('btn_interrogation');
+    for (let i = 0; i < 4; i++) {
+        divSon[i].className = 'btn_interrogation ' + listToWin[i];
+    }
     if (win) {
-        showDiv.className = 'background_win'
         message.textContent = 'You win!\nYou\'re a Mastermind';
         return
     }

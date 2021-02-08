@@ -186,30 +186,6 @@ body {
     box-shadow: rgb(153, 152, 152) 1px 1px 8px;
 }
 
-.red {
-    background: #f21d44;
-}
-.blue {
-    background: #05aff2;
-}
-.aqua {
-    background: #1bbfaf;
-}
-.yellow {
-    background: #f2a516;
-}
-.orange {
-    background: #f25d27;
-}
-.white {
-    background: #fff;
-}
-.clue_white {
-    background: #fff;
-}
-.clue_red {
-    background: #f21d44;
-}
 
 /* ====== RESPONSIVE ======= */
 @media screen and (max-width: 650px) {
@@ -338,4 +314,29 @@ body {
     width: 50px;
     margin-right: 5px;
     border-radius: 200px;
+}
+
+.red {
+    background: #f21d44;
+}
+.blue {
+    background: #05aff2;
+}
+.aqua {
+    background: #1bbfaf;
+}
+.yellow {
+    background: #f2a516;
+}
+.orange {
+    background: #f25d27;
+}
+.white {
+    background: #fff;
+}
+.clue_white {
+    background: #fff;
+}
+.clue_red {
+    background: #f21d44;
 }
